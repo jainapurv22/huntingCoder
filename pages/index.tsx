@@ -6,23 +6,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24 pt-12">
-      <nav className='mb-[40px]'>
-        <ul className="flex justify-center">
-          <li className='mx-[15px]'>
-            <Link href={'/'}>Home</Link>
-          </li>
-          <li className='mx-[15px]'>
-            <Link href={'/about'}>About</Link>
-          </li>
-          <li className='mx-[15px]'>
-            <Link href={'/blog'}>Blog</Link>
-          </li>
-          <li className='mx-[15px]'>
-            <Link href={'/contact'}>Contact</Link>
-          </li>
-        </ul>
-      </nav>
+    <main className="flex min-h-screen flex-col items-center justify-between p-24 pt-0">
       <div className="z-10 flex w-full max-w-5xl items-center justify-center font-mono text-sm lg:flex">
         <h1 className="fixed left-0 top-0 font-bold text-[30px] w-full justify-center  bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:from-inherit lg:static lg:w-auto   lg:p-4 ">
           Hunting Coder
