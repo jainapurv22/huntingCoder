@@ -38,7 +38,7 @@ export default function Home() {
         </div> */}
       </div>
       <div className='mt-[40px]'>
-        <h3 className='text-[38px]'>Popular Blogs</h3>
+        <h3 className='text-[38px]'>Latest Blogs</h3>
         <div className='my-[20px] text-[16px]'> 
           <h2 className='font-bold text-[28px]'>How to learn javascript in 2022?</h2>
           <p>Javascript is the language used to design logic for the web</p>
