@@ -1,11 +1,9 @@
 import React, { useState } from "react";
 
-
 const Contact = () => {
-
-  const onHandleSubmit = (e) =>{
+  const onHandleSubmit = (e) => {
     e.preventDefault();
-    const data = {name,email,password,concern}
+    const data = { name, email, password, concern };
     try {
       const response = fetch("http://localhost:3000/api/postcontact", {
         method: "POST", // or 'PUT'
@@ -14,38 +12,31 @@ const Contact = () => {
         },
         body: JSON.stringify(data),
       });
-  
+
       const result = response.text;
       console.log("Success:", result);
     } catch (error) {
       console.error("Error:", error);
     }
-  }
+  };
 
-  const onHandleChange = (e) =>{
+  const onHandleChange = (e) => {
     console.log(e);
-    if(e.target.name === "name")
-    {
+    if (e.target.name === "name") {
       setname(e.target.value);
-    }
-    else if(e.target.name === "email")
-    {
+    } else if (e.target.name === "email") {
       setemail(e.target.value);
-    }
-    else if(e.target.name === "password")
-    {
+    } else if (e.target.name === "password") {
       setpassword(e.target.value);
-    }
-    else if(e.target.name === "concern")
-    {
+    } else if (e.target.name === "concern") {
       setconcern(e.target.value);
     }
-  }
+  };
 
-  const [name, setname] = useState('')
-  const [email, setemail] = useState('')
-  const [password, setpassword] = useState('')
-  const [concern, setconcern] = useState('')
+  const [name, setname] = useState("");
+  const [email, setemail] = useState("");
+  const [password, setpassword] = useState("");
+  const [concern, setconcern] = useState("");
   return (
     <div className="bg-slate-800 py-[1rem]">
       <form className="flex flex-col items-center" onSubmit={onHandleSubmit}>
@@ -92,7 +83,9 @@ const Contact = () => {
           />
         </div>
         <div className="form-floating mb-[20px] flex flex-col gap-1 items-center">
-          <label htmlFor="floatingTextarea" className="text-[21px]">Comments</label>
+          <label htmlFor="floatingTextarea" className="text-[21px]">
+            Comments
+          </label>
           <textarea
             className="form-control text-black px-[5px] rounded-[5px]"
             placeholder="Show your concern"

@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <div>
       <nav className='py-[40px]'>
-        <ul className="flex justify-center">
+        <ul className="flex justify-center list-none">
           <li className='mx-[15px]'>
             <Link href={'/'}>Home</Link>
           </li>
