@@ -1,7 +1,8 @@
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
+import * as fs from 'fs'
 
-const blog = (props) => {
+const Blog = (props) => {
   const [blogs, setblogs] = useState(props.allBlogs)
   // useEffect(() => {
     
@@ -21,13 +22,18 @@ const blog = (props) => {
   </div>
 }
 
-export async function getServerSideProps() {
-  let data = await fetch('http://localhost:3000/api/blogs');
-  let allBlogs = await data.json();
-
+export async function getStaticProps() {
+  let data = await fs.promises.readdir('blogdata');
+  let allBlogs=[],myfile
+  for (let index = 0; index < data.length; index++) {
+    const item = data[index];
+    myfile = await fs.promises.readFile(('blogdata/'+item),'utf-8');
+    allBlogs.push(JSON.parse(myfile));
+  }
+  console.log(allBlogs)
   return {
     props: {allBlogs},
   }
 }
 
-export default blog
+export default Blog

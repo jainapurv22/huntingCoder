@@ -4,7 +4,7 @@ import React from 'react'
 const Navbar = () => {
   return (
     <div>
-      <nav className='my-[40px]'>
+      <nav className='py-[40px]'>
         <ul className="flex justify-center">
           <li className='mx-[15px]'>
             <Link href={'/'}>Home</Link>
