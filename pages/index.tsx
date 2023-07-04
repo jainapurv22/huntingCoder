@@ -13,29 +13,12 @@ export default function Home() {
         </h1>
         
       </div>
-      <Image alt='' src={'/homeImg1.avif'} width={148} height={128} className='rounded-lg mt-[15px]'></Image>
+      {/* <Image alt='' src={'/homeImg1.avif'} width={148} height={128} className='rounded-lg mt-[15px]'></Image> */}
+      <img src={'/homeImg1.avif'} alt="hunting coder" width={148} height={128} className='rounded-lg mt-[15px]'/>
       <div className="z-10 flex mt-[40px] w-full max-w-5xl items-center justify-center font-mono text-sm lg:flex">
         <p className="fixed left-0 top-0  w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
           A blog for hunting coders by a hunting coder
         </p>
-        {/* <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div> */}
       </div>
       <div className='mt-[40px]'>
         <h3 className='text-[38px]'>Latest Blogs</h3>
