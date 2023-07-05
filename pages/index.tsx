@@ -10,12 +10,12 @@ export default function Home() {
 
     <Image src={'/homeImg1.avif'} alt="hunting coder" width={128} height={108} className='rounded-[70px] mt-[15px]'/>
       <div className="flex w-full max-w-5xl items-center justify-center font-mono text-sm lg:flex">
-        <h1 className="font-bold text-[30px] w-full justify-center bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:from-inherit w-auto text-[2rem] ">
+        <h1 className="font-bold text-[30px] w-auto justify-center bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:from-inherit w-auto text-[2rem] ">
           Hunting Coder
         </h1>
       </div>
       <div className="flex flex-col gap-4 mt-[0px] w-full max-w-5xl items-center justify-center font-mono text-sm lg:flex">
-        <p className="w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-5 pt-5 backdrop-blur-2xl text-[1rem]      dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit w-auto rounded-xl border bg-gray-200 p-4 dark:bg-zinc-800/30 max-sm:p-3 max-sm:rounded-lg max-sm:text-[0.8rem]">
+        <p className="w-auto justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-5 pt-5 backdrop-blur-2xl text-[1rem]      dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit w-auto rounded-xl border bg-gray-200 p-4 dark:bg-zinc-800/30 max-sm:p-3 max-sm:rounded-lg max-sm:text-[0.8rem]">
           A blog for hunting coders by a hunting coder
         </p>
       </div>
