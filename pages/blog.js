@@ -14,7 +14,7 @@ const Blog = (props) => {
         return (
           <div
             key={i}
-            className="my-[20px] px-[22rem] text-[16px] flex items-center flex-col"
+            className="my-[20px] px-[22rem] text-[16px] flex items-start flex-col"
           >
             <Link
               href={`/blogpost/${blogitem.slug}`}
@@ -23,6 +23,10 @@ const Blog = (props) => {
               {blogitem.title}
             </Link>
             <p>{blogitem.description.substr(0, 140)}...</p>
+            <Link href={`/blogpost/${blogitem.slug}`}>
+              <button className='mt-[5px] px-[10px] py-[4px] border rounded-[5px] text-[12px] cursor-pointer hover:bg-gray-800'>Read More</button>
+            </Link>
+            
           </div>
         );
       })}
