@@ -3,6 +3,13 @@ import React, { useState } from "react";
 
 const Contact = () => {
 
+  const clearEntry = () =>{
+    setname('');
+    setemail('');
+    setphone('');
+    setconcern('');
+  }
+
   const onHandleSubmit = (e) =>{
     e.preventDefault();
     const data = {name,email,phone,concern}
@@ -102,9 +109,12 @@ const Contact = () => {
             onChange={onHandleChange}
           ></textarea>
         </div>
-        <div className="flex flex-start">
+        <div className="flex flex-start gap-3">
           <button type="submit" className="border p-1 px-5 rounded-lg text-[14px] max-sm:text-[13px] cursor-pointer">
             Submit
+          </button>
+          <button type="reset" onClick={clearEntry} className="border p-1 px-5 rounded-lg text-[14px] max-sm:text-[13px] cursor-pointer">
+            Reset
           </button>
         </div>
         
