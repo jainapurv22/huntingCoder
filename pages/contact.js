@@ -5,7 +5,7 @@ const Contact = () => {
 
   const onHandleSubmit = (e) =>{
     e.preventDefault();
-    const data = {name,email,password,concern}
+    const data = {name,email,phone,concern}
     try {
       const response = fetch("http://localhost:3000/api/postcontact", {
         method: "POST", // or 'PUT'
@@ -32,9 +32,9 @@ const Contact = () => {
     {
       setemail(e.target.value);
     }
-    else if(e.target.name === "password")
+    else if(e.target.name === "phone")
     {
-      setpassword(e.target.value);
+      setphone(e.target.value);
     }
     else if(e.target.name === "concern")
     {
@@ -44,18 +44,18 @@ const Contact = () => {
 
   const [name, setname] = useState('')
   const [email, setemail] = useState('')
-  const [password, setpassword] = useState('')
+  const [phone, setphone] = useState('')
   const [concern, setconcern] = useState('')
   return (
-    <div className="bg-slate-800 py-[1rem]">
+    <div className="bg-slate-800 py-[1rem] w-full">
       <form className="flex flex-col items-center" onSubmit={onHandleSubmit}>
         <div className="mb-[20px] flex flex-col gap-1 items-start">
-          <label htmlFor="name" className="form-label text-[17px]">
+          <label htmlFor="name" className="form-label text-[17px] max-sm:text-[15px]">
             Enter your name
           </label>
           <input
             type="name"
-            className="form-control text-black px-[5px] rounded-[5px] w-[25rem] text-[15px]"
+            className="form-control text-black px-[5px] rounded-[5px] w-[25rem] max-sm:w-[80vw] text-[15px] max-sm:text-[14px]"
             id="name"
             name="name"
             value={name}
@@ -63,12 +63,12 @@ const Contact = () => {
           />
         </div>
         <div className="mb-[20px] flex flex-col gap-1 items-start">
-          <label htmlFor="email" className="form-label text-[17px]">
+          <label htmlFor="email" className="form-label text-[17px] max-sm:text-[15px]">
             Email
           </label>
           <input
             type="email"
-            className="form-control text-black px-[5px] rounded-[5px] w-[25rem] text-[15px]"
+            className="form-control text-black px-[5px] rounded-[5px] w-[25rem] max-sm:w-[80vw] text-[15px] max-sm:text-[14px]"
             id="email"
             name="email"
             value={email}
@@ -79,23 +79,23 @@ const Contact = () => {
           </div>
         </div>
         <div className="mb-[20px] flex flex-col gap-1 items-start">
-          <label htmlFor="password" className="form-label text-[17px]">
-            Password
+          <label htmlFor="phone" className="form-label text-[17px] max-sm:text-[15px]">
+            Phone
           </label>
           <input
-            type="password"
-            className="form-control text-black px-[5px] rounded-[5px] w-[25rem] text-[15px]"
-            id="password"
-            name="password"
-            value={password}
+            type="phone"
+            className="form-control text-black px-[5px] rounded-[5px] w-[25rem] max-sm:w-[80vw] text-[15px] max-sm:text-[14px]"
+            id="phone"
+            name="phone"
+            value={phone}
             onChange={onHandleChange}
             required
           />
         </div>
         <div className="form-floating mb-[20px] flex flex-col gap-1 items-start">
-          <label htmlFor="floatingTextarea" className="text-[17px]">Comments</label>
+          <label htmlFor="floatingTextarea" className="text-[17px] max-sm:text-[15px]">Comments</label>
           <textarea
-            className="form-control text-black px-[5px] rounded-[5px] w-[25rem] text-[15px]"
+            className="form-control text-black px-[5px] rounded-[5px] w-[25rem] max-sm:w-[80vw] text-[15px] max-sm:text-[14px]"
             id="floatingTextarea"
             name="concern"
             value={concern}
@@ -103,7 +103,7 @@ const Contact = () => {
           ></textarea>
         </div>
         <div className="flex flex-start">
-          <button type="submit" className="border p-1 px-5 rounded-lg text-[14px] cursor-pointer">
+          <button type="submit" className="border p-1 px-5 rounded-lg text-[14px] max-sm:text-[13px] cursor-pointer">
             Submit
           </button>
         </div>

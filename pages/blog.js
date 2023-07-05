@@ -14,11 +14,11 @@ const Blog = (props) => {
         return (
           <div
             key={i}
-            className="my-[20px] px-[22rem] text-[16px] flex items-start flex-col"
+            className="my-[20px] px-[22rem] max-lg:px-[4rem] text-[16px] max-sm:text-[15px] flex items-start flex-col"
           >
             <Link
               href={`/blogpost/${blogitem.slug}`}
-              className="font-bold text-[28px]"
+              className="font-bold text-[28px] max-sm:text-[22px]"
             >
               {blogitem.title}
             </Link>

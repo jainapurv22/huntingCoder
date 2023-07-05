@@ -6,8 +6,8 @@ const Slug = (props) => {
   const [blog, setBlog] = useState(props.blogitem);
   return (
     <div className='flex items-center flex-col'>
-      <h2 className='text-[25px] mb-[15px] font-bold'>{blog&&blog.title}</h2>
-      <p className='px-[24rem]'>{blog&&blog.description}</p>
+      <h2 className='text-[25px] max-sm:text-[20px] mb-[15px] font-bold'>{blog&&blog.title}</h2>
+      <p className='px-[24rem] max-sm:px-[4rem] max-sm:text-[15px]'>{blog&&blog.description}</p>
     </div>
   )
 }
