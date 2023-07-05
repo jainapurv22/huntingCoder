@@ -26,3 +26,31 @@ body {
     rgb(var(--background-start-rgb));
   /* background-color: #7f9cf5; */
 }
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+}
+
+
+/* h1{
+  font-size: appl;
+} */
+
+@layer base {
+  h1 {
+    @apply text-3xl;
+  }
+  h2 {
+    @apply text-2xl;
+  }
+}
+
+ol,ul{
+  list-style: disc;
+}

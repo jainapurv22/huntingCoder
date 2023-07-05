@@ -6,33 +6,35 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24 pt-0">
-      <div className="z-10 flex w-full max-w-5xl items-center justify-center font-mono text-sm lg:flex">
-        <h1 className="fixed left-0 top-0 font-bold text-[30px] w-full justify-center  bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:from-inherit lg:static lg:w-auto   lg:p-4 ">
+    <main className="flex min-h-screen flex-col items-center justify-between p-24 pt-0 max-sm:p-12 max-sm:pt-0">
+
+    <Image src={'/homeImg1.avif'} alt="hunting coder" width={128} height={108} className='rounded-[70px] mt-[15px]'/>
+      <div className="flex w-full max-w-5xl items-center justify-center font-mono text-sm lg:flex">
+        <h1 className="font-bold text-[30px] w-full justify-center bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:from-inherit w-auto text-[2rem] ">
           Hunting Coder
         </h1>
-        
       </div>
-      {/* <Image alt='' src={'/homeImg1.avif'} width={148} height={128} className='rounded-lg mt-[15px]'></Image> */}
-      <img src={'/homeImg1.avif'} alt="hunting coder" width={148} height={128} className='rounded-lg mt-[15px]'/>
-      <div className="z-10 flex mt-[40px] w-full max-w-5xl items-center justify-center font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0  w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
+      <div className="flex flex-col gap-4 mt-[0px] w-full max-w-5xl items-center justify-center font-mono text-sm lg:flex">
+        <p className="w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-5 pt-5 backdrop-blur-2xl text-[1rem]      dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit w-auto rounded-xl border bg-gray-200 p-4 dark:bg-zinc-800/30 max-sm:p-3 max-sm:rounded-lg max-sm:text-[0.8rem]">
           A blog for hunting coders by a hunting coder
         </p>
       </div>
-      <div className='mt-[40px]'>
-        <h3 className='text-[38px]'>Latest Blogs</h3>
-        <div className='my-[20px] text-[16px]'> 
-          <h2 className='font-bold text-[28px]'>How to learn javascript in 2022?</h2>
-          <p>Javascript is the language used to design logic for the web</p>
+      <div className='mt-[40px] flex flex-col'>
+        <h3 className='text-[2rem]'>Latest Blogs</h3>
+        <div className='my-[10px] text-[0.9rem] flex flex-col items-start '> 
+          <h2 className='font-bold text-[1.5rem]'>How to learn javascript in 2022?</h2>
+          <p className='max-w-[500px]'> Javascript is the language used to design logic for the web. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem illo distinctio commodi illum voluptate cupiditate odit laboriosam deleniti? Rerum, dolor.</p>
+          <button className='mt-[5px] px-[10px] py-[4px] border rounded-[5px] text-[12px] cursor-pointer hover:bg-gray-800'>Read More</button>
         </div>
-        <div className='my-[20px] text-[16px]'> 
-          <h2 className='font-bold text-[28px]'>How to learn javascript in 2022?</h2>
+        <div className='my-[10px] text-[0.9rem] flex flex-col items-start'> 
+          <h2 className='font-bold text-[1.5rem]'>How to learn javascript in 2022?</h2>
           <p>Javascript is the language used to design logic for the web</p>
+          <button className='mt-[5px] px-[10px] py-[4px] border rounded-[5px] text-[12px] cursor-pointer hover:bg-gray-800'>Read More</button>
         </div>
-        <div className='my-[20px] text-[16px]'> 
-          <h2 className='font-bold text-[28px]'>How to learn javascript in 2022?</h2>
+        <div className='my-[10px] text-[0.9rem] flex flex-col items-start'> 
+          <h2 className='font-bold text-[1.5rem]'>How to learn javascript in 2022?</h2>
           <p>Javascript is the language used to design logic for the web</p>
+          <button className='mt-[5px] px-[10px] py-[4px] border rounded-[5px] text-[12px] cursor-pointer hover:bg-gray-800'>Read More</button>
         </div>
       </div>
 
